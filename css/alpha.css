@@ -1,0 +1,404 @@
+@font-face {
+    font-family: 'IBMPlexSansKR-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body{    font-family: 'IBMPlexSansKR-Regular';
+}
+*{margin: 0; padding: 0;}
+li { list-style: none;}
+a { text-decoration: none; color: #212121; display: block;        font-family: 'IBMPlexSansKR-Regular';
+}
+
+.wrap{ width: 100%;}
+header{
+    width: 100%;
+    height: 122px;
+    float: left;
+    z-index: 50;    /*맨 앞으로 이동*/
+    position: relative;     /*z-index는 position과 함께 씀.*/
+}
+header .h_in{
+    width: 1600px;
+    margin:0 auto;
+}
+header .h_top .logo{
+    float: left;
+    margin: 15px 0;
+}
+header .h_top .lang{
+    float: right;
+    font-size: 14px;
+    text-decoration: underline;
+    margin: 30px 0;
+    font-weight: bold;
+    letter-spacing: -1px;       /*자간*/
+}
+header .h_bottom{
+    clear:both;
+    /* 위 영역(h_top)의 자식객체들 속성 float의 영향을 받지 않음. 강제 줄바꿈. float 해제 */
+}
+header .h_bottom nav{
+    float: left;
+}
+/* 내비게이션 */
+header .h_bottom nav{
+    float: left;
+}
+header .h_bottom nav>ul>li{
+    float: left;
+    width: 160px;
+}
+header .h_bottom nav>ul>li>a{
+    padding: 5px 0 20px;
+    font-weight: bold;
+    font-size: 15px;
+}
+header .h_bottom nav>ul>li:hover>a{
+    color: #ed1f2d;
+}
+/* 서브메뉴 */
+header .h_bottom nav .sub{
+    background-color: #333;
+    padding: 30px 20px;
+    display:none;       /*안보임*/
+    margin-right:10px ;
+}
+header .h_bottom nav .sub li a{
+    color: #fff;
+    padding:10px 0;
+}
+/* 메인메뉴에 마우스 오버했을 때 서브메뉴 나옴 */
+header .h_bottom nav>ul>li:hover .sub{
+    display: block;
+}
+/* sns아이콘 */
+header .h_bottom .sns_icon{
+    float:right;
+}
+header .h_bottom .sns_icon ul li{
+    float: left;
+    margin-left:20px;
+}
+section.main{
+    width: 100%;
+    float: left;
+}
+section .main_in{
+    width: 1600px;
+    margin: 0 auto;
+}
+/* Alpha product */
+section.product{
+    width: 100%;
+    float: left;
+}
+section .pro_in{
+    width: 1300px;
+    margin: 0 auto;
+}
+section .pro_in h1 {
+    margin-top: 130px;
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+}
+section .pro_in h1 span{
+    font-weight: bold;
+}
+section .pro_in ul li{
+    float: left;
+    position: relative;
+    width: 415px;
+    height: 317px;
+    margin-bottom: 30px;
+    margin-right: 24px;
+    border: 1px solid #dedede;
+    overflow: hidden;
+}
+/* 3n:3의 배수 */
+section .pro_in ul li:nth-child(3n){
+    margin-right: 0;
+}  
+section .pro_in ul li div{
+    position: absolute;
+
+}
+section .pro_in ul li .des{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding:80px;
+    text-align: center;
+    color: #fff;
+    line-height: 34px;
+    background-color: rgba(0,0,0,0.4);
+    /* r(red), g(green), b(blue), a(alpha:투명도) */
+    top: 317px; /*다른 위치로 하고싶으면 left, right, bottom등 을 이용*/
+    transition: .3s;
+}
+section .pro_in ul li:hover .des {
+    top:0;
+}
+section .pro_in ul li .des h3{
+    font-size: 30px;
+    font-weight: normal;
+}
+section .pro_in ul li .des i{
+padding: 20px;
+border: 1px solid #fff;
+border-radius: 100%;
+margin:30px;}
+
+/*Alpha news */
+section.news{
+    overflow: hidden;
+    float: left;
+    width: 100%;
+    margin-top: 110px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede#ddd;
+}
+section .news_in{
+    width: 1300px;
+    margin: 0 auto;
+}
+/* 자손 선택자*/
+section .news_in> div{
+    float: left;
+    padding:30px 20px;
+}
+section .news_in .alpha_news{
+    width: 460px;
+    border-right: 1px solid #dedede;
+}
+section .news_in .alpha_news .news_title h1{
+    font-size: 20px;
+    font-weight: normal;
+    float: left;
+}
+section .news_in .alpha_news .news_title h1 span{
+    font-weight: bold;
+}
+section .news_in .alpha_news .news_title a{
+    float: right;       /*더하기 단추*/
+}
+section .news_in .alpha_news .thum_news{
+    clear: both;
+    margin-top: 50px;
+}
+section .news_in .alpha_news .thum_news .news_img {
+    float: left;
+    margin-bottom: 20px;
+}
+section .news_in .alpha_news .thum_news .news_content{
+    float:left;
+    margin-left: 20px;
+    width: 275px;
+}
+section .news_in .alpha_news .thum_news .news_content p{
+font-size: 16px;
+color: #666;
+}
+section .news_in .alpha_news .news_list{
+    border-top: 1px solid #999;
+    clear:both;
+    padding-top: 20px;
+    color: #666;
+}
+section .news_in .alpha_news .thum_news .news_content span{
+    float: right;   color:#666;
+    font-size: 14px;
+    padding-top: 20px;
+    color: #666;
+    padding-bottom: 20px;
+}
+section .news_in .alpha_news .news_list ul li p{
+    font-size: 14px;
+    line-height: 24px;
+}
+section .news_in .alpha_news .news_list ul li p a{
+    float:left;
+    color: #666;
+}
+section .news_in .alpha_news .news_list ul li p span{
+    float:right;
+    color: #666;
+}
+/* MSDS */
+section .news_in >.news_area{
+    float: left;
+    overflow: hidden;
+
+}
+section .news_in .news_area{
+    padding: 0;
+    overflow: hidden;
+}
+section .news_in>.news_area ul li{
+    float: left;
+    text-align: center;
+    padding: 50px 24px;
+    background-color: #efefef;
+    border: 1px solid #dedede;
+    border-left: none;
+    line-height: 60px;
+    height: 234px;
+
+}
+section .news_in .news_area ul li hr{
+    width: 30px;
+    height: 3px;
+    border: none;
+    background-color: red;
+    margin: 0 auto;
+}
+section .news_in .news_area ul li p{
+    line-height: 26px;
+    color: #666;
+    margin-top: 30px;
+}
+section .news_in .news_area ul li:hover{
+    background-color: #ddd ;
+}
+section .news_in .news_area ul li:nth-child(2){
+    background-image: url(../img/line.png);
+}
+/* instagram */
+section.insta{
+    float: left;
+    width: 100%;
+    text-align: center;
+    line-height: 60px;
+    margin-top: 130px;
+}
+section.insta h1{
+    font-weight: normal;
+    font-size: 30px;
+}
+section.insta h1 span{
+    font-weight: bold;
+}
+section.insta div.txt{
+    width: 1000px;
+    height: 120px;
+    background-color: #f9f9f9;
+    margin: 10px auto;
+    padding: 20px;
+}
+section.insta .txt h2{
+    font-size: 30px;
+}
+section.insta .txt p span{
+    color:blue;
+}
+
+/* footer */
+footer {
+    width: 100%;
+    float: left;
+    margin-top: 130px;
+}
+
+footer .f_top {
+    width: 100%;
+    height: 54px;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #dedede;
+}
+
+footer .f_top .f_top_in {
+    width: 1300px;
+    margin: 0 auto;
+}
+
+footer .f_top .f_top_in {
+    width: 1300px;
+    margin: 0 auto;
+}
+
+footer .f_top .f_top_in ul li {
+    float: left;
+    margin: 20px 30px;
+    margin-left: 0;
+}
+
+footer .f_top .f_top_in ul li a {
+    font-size: 14px;
+    color: #666;
+}
+
+footer .f_bottom {
+    width: 100%;
+    clear: both; /* bottom_left 영역의 float 해제 */
+}
+
+footer .f_bottom .f_bottom_in {
+    width: 1300px;
+    margin: 0 auto;
+    color: #666;
+    padding: 40px 0;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+footer .f_bottom .f_bottom_in .bottom_left {
+    float: left;
+}
+
+footer .f_bottom .f_bottom_in .bottom_left address {
+    /* address 태그는 기본적으로 글자가 기울어짐 */
+    font-style: normal;
+}
+
+footer .f_bottom .f_bottom_in .bottom_left address span {
+    border: 1px solid #ddd;
+    font-size: 12px;
+    padding: 2px 3px;
+    border-radius: 3px;
+}
+
+footer .f_bottom .f_bottom_in .bottom_left h3 {
+    margin-bottom: 20px;
+}
+
+footer .f_bottom .f_bottom_in .bottom_left .copyright {
+    margin: 20px 0;
+    margin-bottom: 80px;
+}
+
+footer .f_bottom .f_bottom_in .bottom_left .copyright img {
+    width: 80px;
+}
+
+footer .f_bottom .f_bottom_in .bottom_left .copyright p {
+    float: left;
+    margin-right: 30px;
+    line-height: 24px;
+}
+
+footer .f_bottom .f_bottom_in .bottom_right .f_sns {
+    margin-top: 20px;
+}
+
+footer .f_bottom .f_bottom_in .bottom_right {
+    float: right;
+}
+
+footer .f_bottom .f_bottom_in .bottom_right h4 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+footer .f_bottom .f_bottom_in .bottom_right .f_sns ul li {
+    float: left;
+    margin-right: 20px;
+}
+
+footer .f_bottom .f_bottom_in .bottom_right .f_sns ul li:first-child img {
+    width: 20px;
+}
+
